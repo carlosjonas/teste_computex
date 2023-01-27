@@ -116,5 +116,5 @@
 	  </div>
 	</div>
 
-	<!--Ínicio Container body-->
+	<!--Ínicio Container Body-->
 	<div class="container">
