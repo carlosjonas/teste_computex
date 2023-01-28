@@ -9,7 +9,14 @@
 	//Url do horário
 	$urlhorario = "http://camerascomputex.ddns.net:8080/escola/json_horario_aluno.php?matricula=2011004&senha=99999999&ano=20211";
 	$jsonStringHorario = file_get_contents($urlhorario);
-	echo "<pre>"; print_r($jsonStringHorario); echo "</pre>"; 
+	//echo "<pre>"; print_r($jsonStringHorario); echo "</pre>"; 
 	$jsoninfoHorario = json_decode($jsonStringHorario,true);
-	echo "<pre>"; print_r($jsoninfoHorario); echo "</pre>";
+	//echo "<pre>"; print_r($jsoninfoHorario); echo "</pre>";
+
+	//Url do acesso
+	$urlacesso = "http://camerascomputex.ddns.net:8080/escola/ws_controller.php?action=getTurmas&ano=20211";
+	$jsonStringAcesso = file_get_contents($urlacesso);
+	//echo "<pre>"; print_r($jsonStringAcesso); echo "</pre>"; 
+	$jsoninfoAcesso = json_decode($jsonStringAcesso,true);
+	//echo "<pre>"; print_r($jsoninfoAcesso); echo "</pre>";
  ?>
