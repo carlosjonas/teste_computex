@@ -1,0 +1,13 @@
+*{
+	font-family: Verdana;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+}
+
+a,a:hover{
+	text-decoration: none;
+	color: red;
+}

@@ -31,10 +31,10 @@
 
 				<a href="index.php" class="btn btn-danger float-left">Voltar</a>
 
-				<h1 class="mt-3 text-center table-danger table-striped">Horário Escolar</h1>
+				<h1 class="mt-3 text-center">Horário Escolar</h1>
 					
-				<table class="table mt-3 text-center">
-					<thead>
+				<table class="table mt-3 table table-danger table-striped table-bordered">
+					<thead class="text-center">
 						<tr>
 							<?php foreach ($jsoninfoHorario['horario'] as $key => $grade): ?>		
 								<th class="id"><?=$grade["dia"] ;?></th>
