@@ -19,4 +19,11 @@
 	//echo "<pre>"; print_r($jsonStringAcesso); echo "</pre>"; 
 	$jsoninfoAcesso = json_decode($jsonStringAcesso,true);
 	//echo "<pre>"; print_r($jsoninfoAcesso); echo "</pre>";
+
+	//Url do aluno
+	$urlaluno = "http://camerascomputex.ddns.net:8080/escola/ws_controller.php?action=getAlunosTurma&ano=20211&escola=1&grau_serie=15&turno=M&turma=1&status=C";
+	$jsonStringAluno = file_get_contents($urlaluno);
+	//echo "<pre>"; print_r($jsonStringAluno); echo "</pre>"; 
+	$jsoninfoAluno = json_decode($jsonStringAluno,true);
+	//echo "<pre>"; print_r($jsoninfoAluno); echo "</pre>";
  ?>
