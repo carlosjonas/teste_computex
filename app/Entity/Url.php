@@ -27,7 +27,7 @@ class Url{
 	/**
 	 * String de domínio de aluno para a url
 	 */
-	private $erros;
+	private $erros= [];
 	
 	/**
 	 * Método que traz o json para o site
@@ -66,7 +66,8 @@ class Url{
 				</div>
 			';
 			header ("location: http://camerascomputex.ddns.net:8080/escola/index2.php");
-			$erros[] = ("Error: " .$e->getMessage());
+			$erros['titulo'] = ("Error: " .$e->getMessage());
+			$_SESSION['erro'] = $erros['titulo'];
 		}
 	}
 
@@ -99,7 +100,7 @@ class Url{
 				</div>
 			';
 			header ("location: index.php");
-			$erros[] = ("Error: " .$e->getMessage());
+			$erros['titulo'] = ("Error: " .$e->getMessage());
 		}
 	}
 
@@ -133,7 +134,7 @@ class Url{
 				</div>
 			';
 			header ("location: index.php");
-			$erros[] = ("Error: " .$e->getMessage());
+			$erros['titulo'] = ("Error: " .$e->getMessage());
 		}
 	}
 
@@ -166,7 +167,7 @@ class Url{
 				</div>
 			';
 			header ("location: index.php");
-			$erros[] = ("Error: " .$e->getMessage());
+			$erros['titulo'] = ("Error: " .$e->getMessage());
 		}
 	}
 
@@ -174,8 +175,8 @@ class Url{
 	 * Método que traz os erros para o site
 	 * @return array
 	 */
-	public static function getError(){
-		return $erros;		
+	public function getError(){
+		return $erros = [];		
 	}
 	
 }
