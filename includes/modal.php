@@ -44,7 +44,7 @@
 						  </div>
 						  <div class="row mt-3">
 						    <div class="col">
-						      <strong>Nome:</strong> <?= $jsoninfo['nome'];?>
+						      <strong>Nome:</strong> <?= $jsondata['nome'];?>
 						    </div>
 						    <div class="col">
 						      <strong>Email:</strong> arthurm@gmail.com
@@ -52,10 +52,10 @@
 						  </div>
 						  <div class="row mt-3">
 						    <div class="col">
-						      <strong>Matrícula:</strong> <?= $jsoninfo['matricula'];?>
+						      <strong>Matrícula:</strong> <?= $jsondata['matricula'];?>
 						    </div>
 						    <div class="col">
-						      <strong>Nascimento:</strong> <?= $jsoninfo['nascimento'];?>
+						      <strong>Nascimento:</strong> <?= $jsondata['nascimento'];?>
 						    </div>
 						    <div class="col">
 						      <strong>Sexo:</strong> M
@@ -94,10 +94,10 @@
 			  </div>
 			  <div class="row mt-3">
 			    <div class="col">
-			      <strong>Matrícula:</strong> <?= $jsoninfo['matricula'];?>
+			      <strong>Matrícula:</strong> <?= $jsondata['matricula'];?>
 			    </div>
 			    <div class="col">
-			      <strong>Nascimento:</strong> <?= $jsoninfo['nascimento'];?>
+			      <strong>Nascimento:</strong> <?= $jsondata['nascimento'];?>
 			    </div>
 			    <div class="col">
 			      <strong>Sexo:</strong> M

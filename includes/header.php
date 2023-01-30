@@ -22,10 +22,10 @@
 				  <div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav">
 				      <li class="nav-item">
-				        <a class="nav-link link-menu" aria-current="page" href="index.php"><?= $jsoninfo['escola'];?></a>
+				        <a class="nav-link link-menu" aria-current="page" href="index.php"><?= $jsondata['escola'];?></a>
 				      </li>
 				      <li class="nav-item link-menu">
-				        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><?= $jsoninfo['nome'];?></a>
+				        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><?= $jsondata['nome'];?></a>
 				      </li>
 				      <li class="nav-item link-menu">
 				        <a class="nav-link" href="logout.php">Sair</a>

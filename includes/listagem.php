@@ -1,9 +1,11 @@
+<?php $jsondata = $jsoninfo->getInfoJson(); ?>	
 	<main class="mt-5">
 		<section>
 			<!--Card que mostra as opções do Menu-->
 			<div class="container text-center">
 				<div class="row row-cols-3">
-					<?php foreach ($jsoninfo['menu'] as $menu): ?>
+
+					<?php foreach ($jsondata['menu'] as $menu): ?>
 						<div class="col-4 mb-3">
 							<a href="<?= $menu['link']; ?>">
 								<div class="card" style="width: 18rem;">
