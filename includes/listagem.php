@@ -8,9 +8,10 @@
 						<div class="col-4 mb-3">
 							<a href="
 								<?php 
-									if (!isset($menu['link'])) {
+									if ($menu['link'] == null) {
 										header("location: index.php");
-									} 
+									}
+									echo $menu['link'];
 								?>
 							">
 								<div class="card" style="width: 18rem;">

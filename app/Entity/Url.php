@@ -10,27 +10,12 @@ class Url{
 	public $dominio;
 
 	/**
-	 * String de domínio de acesso para a url
+	 * Array de erros para registrar em uma tabela
 	 */
-	public $acesso;
-
-	/**
-	 * String de domínio de horario para a url
-	 */
-	public $horario;
-
-	/**
-	 * String de domínio de aluno para a url
-	 */
-	public $aluno;
-
-	/**
-	 * String de domínio de aluno para a url
-	 */
-	private $erros= [];
+	public $erros= [];
 	
 	/**
-	 * Método que traz o json para o site
+	 * Método construtor que traz o dominio para o site
 	 * @return array
 	 */
 	public function __construct(){
@@ -67,7 +52,6 @@ class Url{
 			';
 			header ("location: http://camerascomputex.ddns.net:8080/escola/index2.php");
 			$erros['titulo'] = ("Error: " .$e->getMessage());
-			$_SESSION['erro'] = $erros['titulo'];
 		}
 	}
 
@@ -76,8 +60,9 @@ class Url{
 	 * @return array
 	 */
 	public function getInfoJsonHorario(){
-		$url = "{$this->dominio}/escola/json_horario_aluno.php?matricula=2011004&senha=99999999&ano=20211";
 		try {
+			$url = "{$this->dominio}/escola/json_horario_aluno.php?matricula=2011004&senha=99999999&ano=20211";
+		
 			$jsonString = file_get_contents($url);
 			return $jsoninfo = json_decode($jsonString,true);
 		} catch (Exception $e) {
@@ -100,7 +85,7 @@ class Url{
 				</div>
 			';
 			header ("location: index.php");
-			$erros['titulo'] = ("Error: " .$e->getMessage());
+			return $erros['titulo'] = ("Error: " .$e->getMessage());
 		}
 	}
 

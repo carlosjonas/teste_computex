@@ -28,6 +28,7 @@
 		    </tr>
 		  </thead>
 		  <tbody>
+		  	<?php  echo "<pre>"; print_r($erros); echo "</pre>"?>
 		  	<?php foreach ($erros as $erro): ?>
 		    	<tr>
 			        <td><?= $erro['titulo'];?></td>
