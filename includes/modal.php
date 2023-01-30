@@ -16,7 +16,7 @@
 		          	<div class="container text-center bg-danger">
 						  <div class="row">
 						    <div class="col">
-						      Lotação: Escola 
+						      Lotação: Escola
 						    </div>
 						    <div class="col">
 						      Esc:01

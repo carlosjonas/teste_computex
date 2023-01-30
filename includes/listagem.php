@@ -7,7 +7,7 @@
 					<?php foreach ($jsondata['menu'] as $menu): ?>
 						<div class="col-4 mb-3">
 							<a href="
-								<?php 
+								<?php
 									if ($menu['link'] == null) {
 										header("location: index.php");
 									}

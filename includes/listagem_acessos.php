@@ -9,7 +9,7 @@
 
 				<!--Tabela de listagem de turmas-->
 				<table class="mt-5 table table-danger table-striped table-bordered minhaTabela">
-					
+
 				  <thead>
 				    <tr class="text-center">
 				      <th scope="col">Série</th>
@@ -32,7 +32,7 @@
 							<td>
 					        	<?php
 					        		switch ($acesso['turno']):
-									    case "M": 
+									    case "M":
 									        echo "Manhã";
 									        break;
 									    case "T":
@@ -49,7 +49,7 @@
 						</tr>
 					<?php endforeach ?>
 				  </tbody>
-				  	
+
 				</table>
 
 				<h1 class="mt-3 text-center">Listagem de Alunos</h1>
@@ -69,7 +69,7 @@
 					        <td><?= $aluno['nome'];?></td>
 				    	</tr>
 					<?php endforeach ?>
-				  </tbody>  	
+				  </tbody>
 				</table>
 
 				<!--Botão que gera o PDF-->

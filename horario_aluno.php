@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	//Incluindo autoload de classes
 	require __DIR__.("/vendor/autoload.php");
