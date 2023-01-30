@@ -14,7 +14,7 @@
     	function gerarPdf(){
     		var doc = new jsPDF()
 
-			doc.fromHTML('<table> <thead> <tr> <th>Matrícula</th> <th> Nome </th> </tr> </thead> <tbody> <?php foreach ($jsoninfoAluno as $aluno): ?>
+			doc.fromHTML('<table> <thead> <tr> <th>Matrícula</th> <th> Nome </th> </tr> </thead> <tbody> <?php foreach ($jsondataAluno as $aluno): ?>
 				    	<tr> <td><?= $aluno['matricula'];?></td> <td><?= $aluno['nome'];?></td>	</tr> <?php endforeach ?>
 				  </tbody> </table>', 30)
 			doc.save('Lista de alunos.pdf')

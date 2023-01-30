@@ -19,7 +19,7 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				  	<?php foreach ($jsoninfoAcesso as $acesso): ?>
+				  	<?php foreach ($jsondataAcesso as $acesso): ?>
 						<tr>
 							<td><?=$acesso['serie_longa'];?></td>
 							<td><?=$acesso['grau_longo'];?></td>
@@ -63,7 +63,7 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				  	<?php foreach ($jsoninfoAluno as $aluno): ?>
+				  	<?php foreach ($jsondataAluno as $aluno): ?>
 				    	<tr>
 					        <td><?= $aluno['matricula'];?></td>
 					        <td><?= $aluno['nome'];?></td>
@@ -73,7 +73,7 @@
 				</table>
 
 				<!--Botão que gera o PDF-->
-				<p>Clique aqui para gerar a lista de alunos: </p>
+				<p class="mt-3">Clique aqui para gerar a lista de alunos: </p>
 				<button onclick="gerarPdf()">Gerar PDF</button>
 
 			</div>
