@@ -38,13 +38,13 @@
 				<table class="table mt-3 table table-danger table-striped table-bordered">
 					<thead class="text-center">
 						<tr>
-							<?php foreach ($jsoninfoHorario['horario'] as $key => $grade): ?>		
+							<?php foreach ($jsondataHorario['horario'] as $key => $grade): ?>		
 								<th class="id"><?=$grade["dia"] ;?></th>
 							<?php endforeach ?>
 						</tr>
 					</thead>
 					<tbody>
-						<?php $lines = agroupByLinesWeekday($jsoninfoHorario['horario']) ?>
+						<?php $lines = agroupByLinesWeekday($jsondataHorario['horario']) ?>
 						<?php foreach ($lines as $line): ?>
 							<tr>
 								<?php foreach ($line as $column): ?>
