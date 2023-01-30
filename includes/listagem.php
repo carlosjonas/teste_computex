@@ -11,7 +11,7 @@
 									if ($menu['link'] == null) {
 										header("location: index.php");
 									}
-									echo $menu['link'];
+									echo "./views/".$menu['link'];
 								?>
 							">
 								<div class="card" style="width: 18rem;">

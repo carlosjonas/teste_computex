@@ -39,7 +39,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: erros.php");
+			header ("location: ./views/erros.php");
 		}
 	}
 
@@ -60,7 +60,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: erros.php");
+			header ("location: ./views/erros.php");
 		}
 	}
 
@@ -81,7 +81,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: erros.php");
+			header ("location: ./views/erros.php");
 		}
 	}
 
@@ -101,7 +101,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: erros.php");
+			header ("location: ./views/erros.php");
 		}
 	}
 

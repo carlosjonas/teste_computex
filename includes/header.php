@@ -28,7 +28,7 @@
 				        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><?= $jsondata['nome'];?></a>
 				      </li>
 				      <li class="nav-item link-menu">
-				        <a class="nav-link" href="logout.php">Sair</a>
+				        <a class="nav-link" href="./views/logout.php">Sair</a>
 				      </li>
 				    </ul>
 				  </div>

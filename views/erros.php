@@ -1,7 +1,7 @@
 <?php
 
 	//Incluindo autoload de classes
-	require __DIR__.("/vendor/autoload.php");
+	require ("../vendor/autoload.php");
 
 	use \App\Entity\Url;
 
@@ -9,7 +9,7 @@
 	$erros = $url->getError();
 
 	//Inclundo os links necessários
-	include __DIR__.("/includes/header_erro.php");
+	include ("../includes/header_erro.php");
 
 ?>
 
@@ -39,6 +39,6 @@
 	</div>
 
 <?php
-	include __DIR__.("/includes/footer.php");
+	include ("../includes/footer.php");
 
  ?>

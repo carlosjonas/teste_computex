@@ -1,7 +1,7 @@
 <?php
 
 	//Incluindo autoload de classes
-	require __DIR__.("/vendor/autoload.php");
+	require ("../vendor/autoload.php");
 
 	use \App\Entity\Url;
 
@@ -12,7 +12,7 @@
 
 
 	//Inclundo os links necessários
-	include __DIR__.("/includes/header.php");
-	include __DIR__.("/includes/listagem_horario_aluno.php");
-	include __DIR__.("/includes/footer.php");
+	include ("../includes/header.php");
+	include ("../includes/listagem_horario_aluno.php");
+	include ("../includes/footer.php");
  ?>

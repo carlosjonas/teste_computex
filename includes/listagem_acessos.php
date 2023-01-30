@@ -2,7 +2,7 @@
  	<main>
 		<section>
 			<div class="container mb-5">
-				<a href="index.php" class="btn btn-danger mt-3">Voltar</a>
+				<a href="../index.php" class="btn btn-danger mt-3">Voltar</a>
 
 				<?php  //echo "<pre>"; print_r($jsoninfoAcesso); echo "</pre>"; ?>
 				<h1 class="mt-3 text-center">Listagem de Turmas</h1>
