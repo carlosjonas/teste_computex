@@ -1,4 +1,3 @@
-<?php $jsondata = $jsoninfo->getInfoJson(); ?>	
 	<main class="mt-5">
 		<section>
 			<!--Card que mostra as opções do Menu-->
