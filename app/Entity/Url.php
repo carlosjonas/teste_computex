@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Entity;
 
@@ -26,7 +26,7 @@ class Url{
 	 * Método que traz o json para o site
 	 * @return array
 	 */
-	public function getInfoJson(){		
+	public function getInfoJson(){
 		try {
 			$url = "{$this->dominio}/escola/mobile_login.php?matricula=2011004&senha=99999999&token=X&so=ios";
 			$jsonString = file_get_contents($url);
@@ -50,7 +50,7 @@ class Url{
 	public function getInfoJsonHorario(){
 		try {
 			$url = "{$this->dominio}/escola/json_horario_aluno.php?matricula=2011004&senha=99999999&ano=20211";
-		
+
 			$jsonString = file_get_contents($url);
 			// verifica se há conteudo, se não houver uma exception é criada
 			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados"); }
@@ -69,7 +69,7 @@ class Url{
 	 * Método que traz o json de acessos para o site
 	 * @return array
 	 */
-	public function getInfoJsonAcesso(){		
+	public function getInfoJsonAcesso(){
 		try {
 			$url = "{$this->dominio}/escola/ws_controller.php?action=getTurmas&ano=20211";
 			$jsonString = file_get_contents($url);
