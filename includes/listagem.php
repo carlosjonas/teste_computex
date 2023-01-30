@@ -1,5 +1,6 @@
 	<main class="mt-5">
 		<section>
+			<!--Card que mostra as opções do Menu-->
 			<div class="container text-center">
 				<div class="row row-cols-3">
 					<?php foreach ($jsoninfo['menu'] as $menu): ?>

@@ -7,6 +7,7 @@
 				<?php  //echo "<pre>"; print_r($jsoninfoAcesso); echo "</pre>"; ?>
 				<h1 class="mt-3 text-center">Listagem de Turmas</h1>
 
+				<!--Tabela de listagem de turmas-->
 				<table class="mt-5 table table-danger table-striped table-bordered minhaTabela">
 					
 				  <thead>
@@ -53,6 +54,7 @@
 
 				<h1 class="mt-3 text-center">Listagem de Alunos</h1>
 
+				<!--Tabela com listagem de alunos-->
 				<table class="mt-5 table table-danger table-striped table-bordered minhaTabela">
 				  <thead>
 				    <tr class="text-center">
@@ -70,6 +72,7 @@
 				  </tbody>  	
 				</table>
 
+				<!--Botão que gera o PDF-->
 				<p>Clique aqui para gerar a lista de alunos: </p>
 				<button onclick="gerarPdf()">Gerar PDF</button>
 

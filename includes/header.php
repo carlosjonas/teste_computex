@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
   </head>
   <body>
+  		<!--Menu-->
 	    <nav class="navbar navbar-expand-lg bg-danger">
 				<div class="container-fluid">
 				  <a class="navbar-brand" href="index.php"><img src="public/img/logotipo.png" alt="Logo" width="45" height="45" class="d-inline-block align-text-top"></a>
@@ -21,12 +22,12 @@
 				  <div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav">
 				      <li class="nav-item">
-				        <a class="nav-link active" aria-current="page" href="index.php"><?= $jsoninfo['escola'];?></a>
+				        <a class="nav-link link-menu" aria-current="page" href="index.php"><?= $jsoninfo['escola'];?></a>
 				      </li>
-				      <li class="nav-item">
+				      <li class="nav-item link-menu">
 				        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><?= $jsoninfo['nome'];?></a>
 				      </li>
-				      <li class="nav-item">
+				      <li class="nav-item link-menu">
 				        <a class="nav-link" href="logout.php">Sair</a>
 				      </li>
 				    </ul>

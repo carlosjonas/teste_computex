@@ -9,6 +9,7 @@
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   	<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
+  	<!--Scripts de funções js-->
     <script>
     	function gerarPdf(){
     		var doc = new jsPDF()
