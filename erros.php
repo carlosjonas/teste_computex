@@ -1,18 +1,16 @@
-<?php 
+<?php
 
 	//Incluindo autoload de classes
 	require __DIR__.("/vendor/autoload.php");
 
 	use \App\Entity\Url;
-	
-	$erro = new Url();
-	$jsondata = $erro->getInfoJson();
-	$erros = $erro->getError();
 
+	$url  = new Url();
+	$erros = $url->getError();
 
 	//Inclundo os links necessários
-	include __DIR__.("/includes/header.php");
-	
+	include __DIR__.("/includes/header_erro.php");
+
 ?>
 
 	<div class="container">
@@ -28,18 +26,19 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		  	<?php  echo "<pre>"; print_r($erros); echo "</pre>"?>
 		  	<?php foreach ($erros as $erro): ?>
 		    	<tr>
 			        <td><?= $erro['titulo'];?></td>
 		    	</tr>
 			<?php endforeach ?>
-		  </tbody>  	
+		  </tbody>
 		</table>
+
+		<?php $url->clearError(); ?>
 
 	</div>
 
-<?php	
+<?php
 	include __DIR__.("/includes/footer.php");
 
  ?>
