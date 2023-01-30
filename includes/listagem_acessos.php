@@ -7,7 +7,7 @@
 				<?php  //echo "<pre>"; print_r($jsoninfoAcesso); echo "</pre>"; ?>
 				<h1 class="mt-3 text-center">Listagem de Turmas</h1>
 
-				<table class="mt-3 table table-danger table-striped table-bordered">
+				<table class="mt-5 table table-danger table-striped table-bordered minhaTabela">
 					
 				  <thead>
 				    <tr class="text-center">
@@ -53,7 +53,7 @@
 
 				<h1 class="mt-3 text-center">Listagem de Alunos</h1>
 
-				<table class="table table-danger table-striped table-bordered">
+				<table class="mt-5 table table-danger table-striped table-bordered minhaTabela">
 				  <thead>
 				    <tr class="text-center">
 				      <th scope="col">Matrícula</th>
