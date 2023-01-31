@@ -1,31 +1,3 @@
-<?php
-	//Função para agrupar as linhas por dia
-	function agroupByLinesWeekday($grade)
-	{
-		$week_days = [];
-		$lines     = [];
-
-		// pegando os dias na ordem que eles vem
-		foreach ($grade as $grade_days) {
-			$week_days[] = $grade_days['dia'];
-		}
-
-		// percorrendo os dias da semana e pegando seus index e nome
-		foreach ($week_days as $weekday_index => $day) {
-			// percorrendo os horarios
-			foreach ($grade as $grade_days) {
-				// se não houver horario pro index do dia da semana o foreach pula esse index
-				if (!isset($grade_days['horarios'][$weekday_index])) { continue; }
-
-				$grade_days['horarios'][$weekday_index]['line_weekday'] = $day;
-				$lines[$weekday_index][] = $grade_days['horarios'][$weekday_index];
-			}
-		}
-
-		return $lines;
-	}
-
- ?>
 	<main class="mt-5">
 		<section>
 			<div class="container mb-5">
@@ -44,7 +16,11 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php $lines = agroupByLinesWeekday($jsondataHorario['horario']) ?>
+						<?php
+							//$url= new Url();
+							$lines= $jsoninfo->agroupByLinesWeekday($jsondataHorario['horario']);
+						?>
+
 						<?php foreach ($lines as $line): ?>
 							<tr>
 								<?php foreach ($line as $column): ?>

@@ -9,9 +9,10 @@
 							<a href="
 								<?php
 									if ($menu['link'] == null) {
-										header("location: index.php");
+										echo "#";
+									}else{
+										echo "./views/".$menu['link'];
 									}
-									echo "./views/".$menu['link'];
 								?>
 							">
 								<div class="card" style="width: 18rem;">

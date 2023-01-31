@@ -10,7 +10,6 @@
 	$jsondataHorario = $jsoninfo->getInfoJsonHorario();
 	$jsondataAcesso = $jsoninfo->getInfoJsonAcesso();
 
-
 	//Inclundo os links necessários
 	include ("../includes/header.php");
 	include ("../includes/listagem_horario_aluno.php");
