@@ -12,7 +12,9 @@ class Url{
 	/**
 	 * Array de erros para registrar em uma tabela
 	 */
-	public $erros= [];
+	public $erros = [];
+
+	public $base_url = '';
 
 	/**
 	 * Método construtor que traz o dominio para o site
@@ -20,6 +22,10 @@ class Url{
 	 */
 	public function __construct(){
 		$this->dominio = 'http://camerascomputex.ddns.net:8080';
+
+		// montando uma url dinamica para os redirect
+		$path = explode('/', $_SERVER['REQUEST_URI'])[1];
+		$this->base_url = "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['SERVER_NAME']}/{$path}/";
 	}
 
 	/**
@@ -39,7 +45,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: ./views/erros.php");
+			header ("location: {$this->base_url}views/erros.php");
 		}
 	}
 
@@ -53,14 +59,14 @@ class Url{
 
 			$jsonString = file_get_contents($url);
 			// verifica se há conteudo, se não houver uma exception é criada
-			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados do horário"); }
+			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados do horario"); }
 
 			return $jsoninfo = json_decode($jsonString,true);
 		} catch (\Exception $e) {
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: ./views/erros.php");
+			header ("location: {$this->base_url}views/erros.php");
 		}
 	}
 
@@ -81,7 +87,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: ./views/erros.php");
+			header ("location: {$this->base_url}views/erros.php");
 		}
 	}
 
@@ -101,7 +107,7 @@ class Url{
 
 			$this->setError(['titulo' => "Error: " . $e->getMessage()]);
 
-			header ("location: ./views/erros.php");
+			header ("location: {$this->base_url}views/erros.php");
 		}
 	}
 
