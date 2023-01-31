@@ -15,7 +15,7 @@
 
 	<div class="container">
 
-		<a href="index.php" class="btn btn-danger mt-3">Voltar</a>
+		<a href="../index.php" class="btn btn-danger mt-3">Voltar</a>
 
 		<h1 class="mt-3 text-center">Listagem de erros</h1>
 
