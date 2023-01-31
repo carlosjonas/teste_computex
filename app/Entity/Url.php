@@ -53,7 +53,7 @@ class Url{
 
 			$jsonString = file_get_contents($url);
 			// verifica se há conteudo, se não houver uma exception é criada
-			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados"); }
+			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados do horário"); }
 
 			return $jsoninfo = json_decode($jsonString,true);
 		} catch (\Exception $e) {
@@ -74,7 +74,7 @@ class Url{
 			$url = "{$this->dominio}/escola/ws_controller.php?action=getTurmas&ano=20211";
 			$jsonString = file_get_contents($url);
 			// verifica se há conteudo, se não houver uma exception é criada
-			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados"); }
+			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados do acesso"); }
 
 			return $jsoninfo = json_decode($jsonString,true);
 		} catch (\Exception $e) {
@@ -94,7 +94,7 @@ class Url{
 		try {
 			$jsonString = file_get_contents($url);
 			// verifica se há conteudo, se não houver uma exception é criada
-			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados"); }
+			if (!$jsonString) { throw new \Exception("não foi possivel retornar os dados dos alunos"); }
 
 			return $jsoninfo = json_decode($jsonString,true);
 		} catch (\Exception $e) {
