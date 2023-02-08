@@ -8,6 +8,8 @@
     <!--DataTables-->
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   	<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  	<!--Página de scripts.js-->
+  	<script type="text/javascript" src="./public/scripts/script.js"></script>
 
   	<!--Scripts de funções js-->
     <script>
