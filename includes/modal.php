@@ -44,21 +44,21 @@
 						  </div>
 						  <div class="row mt-3">
 						    <div class="col">
-						      <strong>Nome:</strong> <?= $jsondata['nome'];?>
+						      <strong>Nome:</strong> <p id="nome_aluno_modal"></p>
 						    </div>
 						    <div class="col">
-						      <strong>Email:</strong> arthurm@gmail.com
+						      <strong>Email:</strong> <p>arthurm@gmail.com</p>
 						    </div>
 						  </div>
 						  <div class="row mt-3">
 						    <div class="col">
-						      <strong>Matrícula:</strong> <?= $jsondata['matricula'];?>
+						      <strong>Matrícula:</strong> <p id="matricula"></p>
 						    </div>
 						    <div class="col">
-						      <strong>Nascimento:</strong> <?= $jsondata['nascimento'];?>
+						      <strong>Nascimento:</strong> <p id="nascimento"></p>
 						    </div>
 						    <div class="col">
-						      <strong>Sexo:</strong> M
+						      <strong>Sexo:</strong> <p>M</p>
 						    </div>
 						  </div>
 						</div>

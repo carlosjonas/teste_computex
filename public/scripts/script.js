@@ -36,6 +36,9 @@
 	  	  document.getElementById("arrays").innerHTML = json;
 	  	  document.getElementById("nome_escola").innerHTML = json.escola;
 	  	  document.getElementById("nome_aluno").innerHTML = json.nome;
+	  	  document.getElementById("nome_aluno_modal").innerHTML = json.nome;
+	  	  document.getElementById("matricula").innerHTML = json.matricula;
+	  	  document.getElementById("nascimento").innerHTML = json.nascimento;
 	    }
 	  }
 	  xhttp.open("GET", url);
