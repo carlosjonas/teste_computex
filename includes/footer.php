@@ -1,3 +1,9 @@
+	<div class="container" id="demo">
+		<h2>REQUISIÇÃO</h2>
+		<button type="button" onclick="loadDoc()">Trazer json</button>
+
+	</div>
+	<div id="arrays" onclick="loadDoc()"></div>
 	</div>
 		<!--Fim Container Body-->
 
