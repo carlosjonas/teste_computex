@@ -1,11 +1,12 @@
-	<div class="container" id="demo">
+	<!--<div class="container" id="demo">
 		<h2>REQUISIÇÃO</h2>
 		<button type="button" onclick="loadDoc()">Trazer json</button>
 
 	</div>
-	<div id="arrays" onclick="loadDoc()"></div>
-	</div>
+	<div id="arrays" onclick="loadDoc()"></div>-->
+
 		<!--Fim Container Body-->
+	</div>
 
 	<!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -19,13 +20,10 @@
 
   	<!--Scripts de funções js-->
     <script>
+    	loadDoc();
+
     	function gerarPdf(){
     		var doc = new jsPDF()
-
-			doc.fromHTML('<table> <thead> <tr> <th>Matrícula</th> <th> Nome </th> </tr> </thead> <tbody> <?php foreach ($jsondataAluno as $aluno): ?>
-				    	<tr> <td><?= $aluno['matricula'];?></td> <td><?= $aluno['nome'];?></td>	</tr> <?php endforeach ?>
-				  </tbody> </table>', 30)
-			doc.save('Lista de alunos.pdf')
     	}
 
     	$(document).ready(function(){

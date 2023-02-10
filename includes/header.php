@@ -11,7 +11,8 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
   </head>
-  <body onload="onload()">
+  <body>
+  		<div id="arrays"></div>
   		<!--Menu-->
 	    <nav class="navbar navbar-expand-lg bg-danger">
 				<div class="container-fluid">

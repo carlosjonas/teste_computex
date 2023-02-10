@@ -6,7 +6,7 @@
 
 					<?php foreach ($jsondata['menu'] as $menu): ?>
 						<div class="col-4 mb-3">
-							<a href="
+							<a class="menu_link"> href="
 								<?php
 									if ($menu['link'] == null) {
 										echo "#";
