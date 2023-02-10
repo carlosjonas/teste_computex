@@ -11,7 +11,7 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
   </head>
-  <body>
+  <body onload="onload()">
   		<!--Menu-->
 	    <nav class="navbar navbar-expand-lg bg-danger">
 				<div class="container-fluid">
@@ -22,10 +22,10 @@
 				  <div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav">
 				      <li class="nav-item">
-				        <a class="nav-link link-menu" aria-current="page" href="index.php"><?= $jsondata['escola'];?></a>
+				        <a class="nav-link link-menu" aria-current="page" href="index.php" id="nome_escola"></a>
 				      </li>
 				      <li class="nav-item link-menu">
-				        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><?= $jsondata['nome'];?></a>
+				        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nome_aluno"></a>
 				      </li>
 				      <li class="nav-item link-menu">
 				        <a class="nav-link" href="./views/logout.php">Sair</a>
