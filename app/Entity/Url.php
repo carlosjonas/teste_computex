@@ -167,5 +167,42 @@ class Url{
 
 		return $lines;
 	}
+
+	/**
+	 * Método que bota a link pra trabalhar
+	 * @return string
+	 */
+	public function link($hash){
+
+		switch ($hash) {
+			case 'json':
+				$funcao = $this->getInfoJson();
+				break;
+			case 'horario':
+				$funcao = $this->getInfoJsonHorario();
+				break;
+			case 'acesso':
+				$funcao = $this->getInfoJsonAcesso();
+				break;
+			case 'aluno':
+				$funcao = $this->getInfoJsonAluno();
+				break;
+			default:
+				$funcao = "Algo deu errado";
+				break;
+		}
+
+
+		echo json_encode($funcao);
+		exit;
+	}
+
 }
+
+if (isset($_REQUEST['link'])) {
+	$hash = $_REQUEST['link'];
+	$url = new Url();
+	$url->link($hash);
+}
+
  ?>
