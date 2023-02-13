@@ -21,7 +21,7 @@
 
 				<!--Botão que gera o PDF-->
 				<p class="mt-3">Clique aqui para gerar a lista de alunos: </p>
-				<button onclick="gerarPdf()">Gerar PDF</button>
+				<a class="btn btn-danger" href="../includes/gerarPDF.php">Gerar PDF !</a>
 
 			</div>
 		</section>
