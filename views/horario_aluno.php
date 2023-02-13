@@ -11,7 +11,8 @@
 	$jsondataAcesso = $jsoninfo->getInfoJsonAcesso();
 
 	//Inclundo os links necessários
-	include ("../includes/header.php");
+	include ("../includes/header_includes.php");
+	include ("../includes/modal_includes.php");
 	include ("../includes/listagem_horario_aluno.php");
-	include ("../includes/footer.php");
+	include ("../includes/footer_includes.php");
  ?>
