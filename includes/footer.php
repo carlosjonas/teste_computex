@@ -1,11 +1,4 @@
-	<!--<div class="container" id="demo">
-		<h2>REQUISIÇÃO</h2>
-		<button type="button" onclick="loadDoc()">Trazer json</button>
 
-	</div>
-	<div id="arrays" onclick="loadDoc()"></div>-->
-
-		<!--Fim Container Body-->
 	</div>
 
 	<!--Bootstrap-->
@@ -15,17 +8,13 @@
     <!--DataTables-->
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   	<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
   	<!--Página de scripts.js-->
   	<script type="text/javascript" src="./public/scripts/script.js"></script>
 
   	<!--Scripts de funções js-->
     <script>
-    	loadDoc();
-
-    	function gerarPdf(){
-    		var doc = new jsPDF()
-    	}
-
+    	//Script DataTables
     	$(document).ready(function(){
 		  $('.minhaTabela').DataTable({
 		    	"language": {
@@ -33,6 +22,10 @@
 		        }
 		    });
 		});
+    	//Função que traz as opções de menu
+    	loadDoc();
+
     </script>
+
   </body>
 </html>
