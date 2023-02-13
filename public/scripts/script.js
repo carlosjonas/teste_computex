@@ -4,10 +4,11 @@
 	var json;
 	// Variável que guarda as opções do menu
 	var menu;
-
+	// Variável que guarda o domínio
+	//var dominio = "http://localhost";
 
 	function loadDoc() {
-	  url = "http://localhost/teste_computex/app/Entity/Url.php?link=json";
+	  url = "/teste_computex/app/Entity/Url.php?link=json";
 	  const xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
@@ -19,7 +20,6 @@
 	      var json = JSON.parse(this.responseText);
 	      console.log(json);
 
-	  	  document.getElementById("arrays").innerHTML = json;
   	      document.getElementById("nome_escola").innerHTML = json.escola;
 	  	  document.getElementById("nome_escola").innerHTML = json.escola;
 	  	  document.getElementById("nome_aluno").innerHTML = json.nome;
@@ -38,6 +38,8 @@
 
 		  	txt += '<div class="col-4 mb-3">';
 			txt += '	<a class="menu_link" href="views/' + menu[item].link + ' ">';
+			//txt += if (typeof menu[item].link == "undefined"){ "#" }else{menu[item].link};
+			//txt += ' ">';
 			txt += '		<div class="card" style="width: 18rem;">'
 			txt += '			<img src="public/img/icones/' + menu[item].icone + '.svg" class="card-img-top" alt="logo">'
 			txt += '			<div class="card-body">'

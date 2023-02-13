@@ -1,12 +1,24 @@
+	//Variável que recebe as informações do json de horário
+	var horario;
+
+	function agroupByLinesWeekday(){
+		// Variável que recebe os dias da semana
+		var weekdays;
+		// Variável que recebe as linhas
+		var lines;
+
+		forEach
+	}
+
 	function loadDocHorario() {
-	  url = "http://localhost/teste_computex/app/Entity/Url.php?link=horario";
+	  url = "/teste_computex/app/Entity/Url.php?link=horario";
 	  const xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
 	      //Adicionando o response text ao gatilho de um botão
 	      //document.getElementById("demo").innerHTML =
 	      this.responseText;
-	      console.log(this.responseText);
+
 	      // Atribuindo a response text a json para ficar mais semantico
 	      var json = JSON.parse(this.responseText);
 	      console.log(json);
@@ -15,30 +27,37 @@
 
 		  //Variavel que exibe a div de horario
 		  var txt = '';
-
+		  txt += '<thead class="text-center">';
+		  txt += '	<tr>';
 		  Object.keys(dia).forEach(function(item){
 		  	console.log(item + " - " + dia[item]);
 
-		  	txt += '<thead class="text-center">';
-			txt += '			<tr>';
-			txt += '					<th class="id">'+ dia+'dia</th>';
-			txt += '			</tr>';
-			txt += '		</thead>';
-			txt += '		<tbody>';
-			txt += '				<tr>';
-			txt += '						<td >';
-			txt += '							disciplinas <br>';
-			txt += '							Prof(a)';
-			txt += '								professor <br>';
-			txt += '							De';
-			txt += '								inicio';
-			txt += '							Ás';
-			txt += '								fim';
-			txt += '						</td>';
-			txt += '				</tr>';
-			txt += '		</tbody>';
+		  	horarioDia = dia[item].dia;
+			txt += '	<th class="id">'+ horarioDia+'</th>';
+			infoDia = dia[item].horarios;
+		  });
+		  txt += '	</tr>';
+		  txt += '</thead>';
+		  txt += '<tbody>';
+		  console.log(infoDia);
+			//Percorrendo o array para chegar nas informações do dia
+			Object.keys(infoDia).forEach(function(item){
+		  	console.log(item + " - " + infoDia[item]);
+
+				txt += '<tr>';
+				txt += '	<td class= text-center>';
+				txt += '		'+ infoDia[item].disciplina+ ' <br>';
+				txt += '		Prof(a)';
+				txt += '		'+ infoDia[item].professor+ ' <br>';
+				txt += '		De';
+				txt += '		'+ infoDia[item].inicio+ '';
+				txt += '		Ás';
+				txt += '		'+ infoDia[item].fim+ '';
+				txt += '	</td>';
+				txt += '</tr>';
 
 		  });
+		  txt += '</tbody>';
 		  document.getElementById("tabela_horario").innerHTML = txt;
 	    }
 	  }

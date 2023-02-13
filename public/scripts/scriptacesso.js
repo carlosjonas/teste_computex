@@ -3,7 +3,7 @@
 
 
 	function loadDocAcesso() {
-	  url = "http://localhost/teste_computex/app/Entity/Url.php?link=acesso";
+	  url = "/teste_computex/app/Entity/Url.php?link=acesso";
 	  const xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
