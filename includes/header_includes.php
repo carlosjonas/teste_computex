@@ -10,15 +10,6 @@
     <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
-    <!--Página de scripts.js-->
-  	<script type="text/javascript" src="../public/scripts/script.js"></script>
-
-  	<!--Scripts de funções js-->
-    <script>
-    	//Função que traz as opções de menu
-    	loadDoc();
-
-    </script>
   </head>
   <body>
   		<!--Menu-->

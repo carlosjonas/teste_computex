@@ -6,7 +6,13 @@
 	var menu;
 
 	//Atribuindo mensagem de carregando
-	document.getElementById("menu_link").innerHTML = "<li>Carregando...</li>";
+	var carregando = '';
+	carregando += '<div class="loader text-center">';
+ 	carregando += '<div class="loader-wheel"></div>';
+ 	carregando += '<div class="loader-text"></div>';
+	carregando += '</div>';
+
+	document.getElementById("menu_link").innerHTML = carregando;
 
 	function loadDoc() {
 	  url = "/teste_computex/app/Entity/Url.php?link=json";
@@ -36,11 +42,14 @@
 
 		  Object.keys(menu).forEach(function(item){
 		  	console.log(item + " - " + menu[item]);
-
+		  	console.log(menu[item].link);
 		  	txt += '<div class="col-4 mb-3">';
-			txt += '	<a class="menu_link" href="views/' + menu[item].link + ' ">';
-			//txt += if (typeof menu[item].link == "undefined"){ "#" }else{menu[item].link};
-			//txt += ' ">';
+		  	//verificação para os links do menu
+		  	if (!menu[item].link) {
+		  		txt += '	<a class="menu_link" href="#">';
+		  	}else{
+		  		txt += '	<a class="menu_link" href="views/' + menu[item].link + ' ">';
+		  	}
 			txt += '		<div class="card" style="width: 18rem;">'
 			txt += '			<img src="public/img/icones/' + menu[item].icone + '.svg" class="card-img-top" alt="logo">'
 			txt += '			<div class="card-body">'

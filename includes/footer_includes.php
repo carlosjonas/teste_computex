@@ -9,13 +9,11 @@
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   	<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
-  	<!--Página de scripts.js-->
-  	<script type="text/javascript" src="./public/scripts/script.js"></script>
-
-  	<!--Scripts de funções js-->
-    <script>
-    	//Script DataTables
-    	$(document).ready(function(){
+  	<!--JavaScript-->
+  	<script type="text/javascript" src="../public/scripts/scriptacesso.js"></script>
+	<script type="text/javascript">
+		//Script DataTables
+		$(document).ready(function(){
 		  $('.minhaTabela').DataTable({
 		    	"language": {
 		    		"url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
@@ -23,7 +21,18 @@
 		    });
 		});
 
-    </script>
+		$(document).ready(function(){
+		  $('.minhaTabelaAlunos').DataTable({
+		    	"language": {
+		    		"url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+		        }
+		    });
+		});
 
+		//Funções dos js
+		loadDocJson()
+		loadDocAcesso();
+		loadDocAluno();
+    </script>
   </body>
 </html>

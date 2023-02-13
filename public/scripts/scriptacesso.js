@@ -2,7 +2,40 @@
 	var jsonAcesso;
 
 	//Atribuindo mensagem de carregando
-	document.getElementById("tabela_turmas").innerHTML = "<li>Carregando...</li>";
+	var carregandoErro = '';
+	carregandoErro += '<div class="loader text-center">';
+ 	carregandoErro += '<div class="loader-wheel"></div>';
+ 	carregandoErro += '<div class="loader-text"></div>';
+	carregandoErro += '</div>';
+	document.getElementById("tabela_turmas").innerHTML = carregandoErro;
+	document.getElementById("tabela_alunos").innerHTML = carregandoErro;
+
+	function loadDocJson() {
+	  url = "/teste_computex/app/Entity/Url.php?link=json";
+	  const xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	      //Adicionando o response text ao gatilho de um botão
+	      //document.getElementById("demo").innerHTML =
+	      this.responseText;
+	      console.log(this.responseText);
+	      // Atribuindo a response text a json para ficar mais semantico
+	      var json = JSON.parse(this.responseText);
+	      console.log(json);
+
+  	      document.getElementById("nome_escola").innerHTML = json.escola;
+	  	  document.getElementById("nome_escola").innerHTML = json.escola;
+	  	  document.getElementById("nome_aluno").innerHTML = json.nome;
+	  	  document.getElementById("nome_aluno_modal").innerHTML = json.nome;
+	  	  document.getElementById("matricula").innerHTML = json.matricula;
+	  	  document.getElementById("nascimento").innerHTML = json.nascimento;
+
+	  	  console.log(json.menu);
+	  }
+	  xhttp.open("GET", url);
+	  xhttp.send();
+	}
+}
 
 	function loadDocAcesso() {
 	  url = "/teste_computex/app/Entity/Url.php?link=acesso";

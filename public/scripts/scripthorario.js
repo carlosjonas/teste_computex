@@ -2,7 +2,12 @@
 	var horario;
 
 	//Atribuindo mensagem de carregando
-	document.getElementById("tabela_horario").innerHTML = "<li>Carregando...</li>";
+	var carregandoErro = '';
+	carregandoErro += '<div class="loader text-center">';
+ 	carregandoErro += '<div class="loader-wheel"></div>';
+ 	carregandoErro += '<div class="loader-text"></div>';
+	carregandoErro += '</div>';
+	document.getElementById("tabela_horario").innerHTML = carregandoErro;
 
 	function agroupByLinesWeekday(){
 		// Variável que recebe os dias da semana
