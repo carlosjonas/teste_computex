@@ -1,6 +1,8 @@
 	// Variável que guarda os valores json de acesso
 	var jsonAcesso;
 
+	//Atribuindo mensagem de carregando
+	document.getElementById("tabela_turmas").innerHTML = "<li>Carregando...</li>";
 
 	function loadDocAcesso() {
 	  url = "/teste_computex/app/Entity/Url.php?link=acesso";
@@ -39,6 +41,8 @@
 		  });
 			txt += '</tbody>'
 		  document.getElementById("tabela_turmas").innerHTML = txt;
+	    }else{
+	    	document.getElementById("tabela_turmas").innerHTML = txt;
 	    }
 
 	  }
@@ -81,8 +85,9 @@
 		  });
 			txt += '</tbody>'
 		  document.getElementById("tabela_alunos").innerHTML = txt;
+	    }else{
+	    	document.getElementById("tabela_alunos").innerHTML = "<p>Erro, atualize a página ou tente novamente mais tarde</p>";
 	    }
-
 	  }
 	  xhttp.open("GET", url);
 	  xhttp.send();

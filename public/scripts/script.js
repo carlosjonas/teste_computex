@@ -4,8 +4,9 @@
 	var json;
 	// Variável que guarda as opções do menu
 	var menu;
-	// Variável que guarda o domínio
-	//var dominio = "http://localhost";
+
+	//Atribuindo mensagem de carregando
+	document.getElementById("menu_link").innerHTML = "<li>Carregando...</li>";
 
 	function loadDoc() {
 	  url = "/teste_computex/app/Entity/Url.php?link=json";
@@ -51,6 +52,8 @@
 
 		  });
 		  document.getElementById("menu_link").innerHTML = txt;
+	    }else{
+	    	document.getElementById("tabela_alunos").innerHTML = "<p>Erro, atualize a página ou tente novamente mais tarde</p>";
 	    }
 	  }
 	  xhttp.open("GET", url);

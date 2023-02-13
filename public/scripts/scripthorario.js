@@ -1,6 +1,9 @@
 	//Variável que recebe as informações do json de horário
 	var horario;
 
+	//Atribuindo mensagem de carregando
+	document.getElementById("tabela_horario").innerHTML = "<li>Carregando...</li>";
+
 	function agroupByLinesWeekday(){
 		// Variável que recebe os dias da semana
 		var weekdays;
@@ -59,6 +62,8 @@
 		  });
 		  txt += '</tbody>';
 		  document.getElementById("tabela_horario").innerHTML = txt;
+	    }else{
+	    	document.getElementById("tabela_alunos").innerHTML = "<p>Erro, atualize a página ou tente novamente mais tarde</p>";
 	    }
 	  }
 	  xhttp.open("GET", url);
