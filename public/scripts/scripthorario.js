@@ -79,10 +79,7 @@
 		  	horarioDia = dia[item].dia;
 			txt += '	<li class="list-group-item active" aria-current="true">'+ horarioDia+'</li>';
 			infoDia = dia[item].horarios;
-		  });
-		  
 
-		  console.log(infoDia);
 			//Percorrendo o array para chegar nas informações do dia
 			Object.keys(infoDia).forEach(function(item){
 		  	console.log(item + " - " + infoDia[item]);
@@ -99,6 +96,11 @@
 				txt += '	</li>';
 
 		  });
+		  });
+		  
+
+		  console.log(infoDia);
+			
 		  document.getElementById("listagem_horario").innerHTML = txt;
 	    }else{
 	    	document.getElementById("tabela_alunos").innerHTML = "<p>Erro, atualize a página ou tente novamente mais tarde</p>";
