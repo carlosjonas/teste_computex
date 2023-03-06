@@ -47,6 +47,7 @@
 		  txt += '	</tr>';
 		  txt += '</thead>';
 		  txt += '<tbody>';
+
 		  console.log(infoDia);
 			//Percorrendo o array para chegar nas informações do dia
 			Object.keys(infoDia).forEach(function(item){
@@ -67,6 +68,38 @@
 		  });
 		  txt += '</tbody>';
 		  document.getElementById("tabela_horario").innerHTML = txt;
+
+		  //EXIBE A LISTAGEM DE HORÁRIOS
+		  //Variavel que exibe a div de horario
+		  var txt = '';
+		  
+		  Object.keys(dia).forEach(function(item){
+		  	console.log(item + " - " + dia[item]);
+
+		  	horarioDia = dia[item].dia;
+			txt += '	<li class="list-group-item active" aria-current="true">'+ horarioDia+'</li>';
+			infoDia = dia[item].horarios;
+		  });
+		  
+
+		  console.log(infoDia);
+			//Percorrendo o array para chegar nas informações do dia
+			Object.keys(infoDia).forEach(function(item){
+		  	console.log(item + " - " + infoDia[item]);
+
+				
+				txt += '	<li class="list-group-item">';
+				txt += '		'+ infoDia[item].disciplina+ ' <br>';
+				txt += '		Prof(a)';
+				txt += '		'+ infoDia[item].professor+ ' <br>';
+				txt += '		De';
+				txt += '		'+ infoDia[item].inicio+ '';
+				txt += '		Ás';
+				txt += '		'+ infoDia[item].fim+ '';
+				txt += '	</li>';
+
+		  });
+		  document.getElementById("listagem_horario").innerHTML = txt;
 	    }else{
 	    	document.getElementById("tabela_alunos").innerHTML = "<p>Erro, atualize a página ou tente novamente mais tarde</p>";
 	    }

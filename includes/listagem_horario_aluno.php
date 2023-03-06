@@ -11,6 +11,9 @@
 
 				</table>
 
+				<ul class="list-group" id="listagem_horario">
+				</ul>
+
 			</div>
 		</section>
 	</main>
